@@ -139,11 +139,11 @@ public class Catalog {
     }
 
     public String getFeatures() {
-        return Feature;
+        return Features;
     }
 
-    public void setFeatures(String feature) {
-        Feature = feature;
+    public void setFeatures(String features) {
+        Features = features;
     }
 
     public String getTags() {
