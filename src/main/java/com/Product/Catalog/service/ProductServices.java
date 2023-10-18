@@ -4,6 +4,7 @@ import com.Product.Catalog.model.Catalog;
 import com.Product.Catalog.repository.CatalogRepositroy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -24,4 +25,11 @@ public class ProductServices {
         return catalogRepositroy.save(catalog);
     }
 
+    public Catalog UpdateProductDetails(@RequestBody Catalog catalog){
+        return catalogRepositroy.save(catalog);
+    }
+
+    public void DeletProduct(int id){
+        catalogRepositroy.deleteById(id);
+    }
 }

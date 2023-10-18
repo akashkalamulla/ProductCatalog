@@ -28,6 +28,18 @@ public class productController {
         return productServices.CreateProduct(catalog);
     }
 
+    @PutMapping(path = "/product")
+    public Catalog UpdateProductDetails(@RequestBody Catalog catalog){
+        return productServices.UpdateProductDetails(catalog);
+    }
+
+    @DeleteMapping(path = "/product/{id}")
+    public void DeleteProduct(@PathVariable int id){
+        productServices.DeletProduct(id);
+    }
+
+
+
 
 
 }
