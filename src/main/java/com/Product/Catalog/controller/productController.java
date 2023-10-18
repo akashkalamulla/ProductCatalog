@@ -3,8 +3,7 @@ package com.Product.Catalog.controller;
 import com.Product.Catalog.model.Catalog;
 import com.Product.Catalog.service.ProductServices;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,5 +17,17 @@ public class productController {
     public List<Catalog> getAll(){
         return productServices.getAllProducts();
     }
+
+    @GetMapping(path = "/product/{id}")
+    public Catalog getProductFromCatalogId(@PathVariable int id){
+        return productServices.getproductByID(id);
+    }
+
+    @PostMapping(path = "/product")
+    public Catalog CreateProduct(@RequestBody Catalog catalog){
+        return productServices.CreateProduct(catalog);
+    }
+
+
 
 }

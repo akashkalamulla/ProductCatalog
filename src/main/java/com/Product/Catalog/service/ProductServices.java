@@ -17,4 +17,11 @@ public class ProductServices {
         return catalogRepositroy.findAll();
     }
 
+    public Catalog getproductByID(int id){
+        return catalogRepositroy.findById(id).get();
+    }
+    public Catalog CreateProduct(Catalog catalog){
+        return catalogRepositroy.save(catalog);
+    }
+
 }
