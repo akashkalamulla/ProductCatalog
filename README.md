@@ -3,8 +3,10 @@ Aasesment 4 product catalog
 
 #database 
 create database catalog;
+#use database 
 use catalog;
 
+#Query
 CREATE TABLE product (
     productid INT AUTO_INCREMENT,
     productname VARCHAR(255) NOT NULL,
@@ -24,6 +26,8 @@ CREATE TABLE product (
     numreview INT NOT NULL,
     PRIMARY KEY ( productid)
 );
+
+#insert dummy data
 INSERT INTO product (productname, description, category, brand, price, currency, weight, dimension, stockquantity, supplier, imgurls, features, tags, reviewrate, numreview)
 VALUES
     ('Product 1', 'Description for Product 1', 'Electronics', 'Brand A', 299.99, 'USD', 2, '10x5x3', 100, 'Supplier X', 'image_url_1', 'Feature 1, Feature 2', 'Tag 1, Tag 2', 4.5, 50),
