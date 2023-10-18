@@ -1,10 +1,10 @@
-# ProductCatalog
-Aasesment 4 product catalog
+### ProductCatalog
+#Aasesment 4 product catalog
 
-#database 
-create database catalog;
-#use database 
-use catalog;
+###database 
+#create database catalog;
+###use database 
+#use catalog;
 
 #Query
 CREATE TABLE product (
