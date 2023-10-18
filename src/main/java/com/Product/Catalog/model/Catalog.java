@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Catalog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Product_Id;
+    private int ProductId;
     @Column(name = "productname")
     private String ProductName;
     @Column(name = "description")
@@ -40,19 +40,19 @@ public class Catalog {
     private int NumReviews;
 
     public int getProductId() {
-        return Product_Id;
+        return ProductId;
     }
 
     public void setProductId(int productId) {
-        Product_Id = productId;
+        ProductId = productId;
     }
 
     public int getProduct_Id() {
-        return Product_Id;
+        return ProductId;
     }
 
     public void setProduct_Id(int product_Id) {
-        Product_Id = product_Id;
+        ProductId = product_Id;
     }
 
     public String getProductName() {
