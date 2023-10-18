@@ -1,5 +1,5 @@
 ### ProductCatalog
-#Aasesment 4 product catalog
+#Assesment 4 product catalog
 
 ###database 
 #create database catalog;
