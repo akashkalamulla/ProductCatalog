@@ -18,4 +18,11 @@ public interface CatalogRepositroy extends JpaRepository<Catalog,Integer> {
 
     @Query("Select c from Catalog c where c.Brand=?1")
     List<Catalog> findProductfromBrand(String Brand);
+
+    @Query("Select c from Catalog c where c.Category=?1")
+    List<Catalog> findProductfromCategory(String Category);
+
+    @Query("Select c from Catalog c where c.Supplier=?1")
+    List<Catalog> findProductUsingSupplier(String Supplier);
+
 }

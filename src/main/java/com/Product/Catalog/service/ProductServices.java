@@ -46,5 +46,13 @@ public class ProductServices {
         return catalogRepositroy.findProductfromBrand(Brand);
     }
 
+    public List<Catalog> findProductfromCategory(String Category){
+        return catalogRepositroy.findProductfromCategory(Category);
+    }
+
+    public List<Catalog> findProductSupplier(String Supplier){
+        return catalogRepositroy.findProductUsingSupplier(Supplier);
+    }
+
 
 }

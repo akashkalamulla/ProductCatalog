@@ -53,6 +53,16 @@ public class productController {
         return productServices.findProdcutfromBrand(Brand);
     }
 
+    @GetMapping(path = "/products",params = "category")
+    public List<Catalog> findProductFromCategory(@RequestParam String Category){
+        return productServices.findProductfromCategory(Category);
+    }
+
+    @GetMapping(path = "/products",params = "supplier")
+    public List<Catalog> findProductSupplier(@RequestParam String Supplier){
+        return productServices.findProductSupplier(Supplier);
+    }
+
 
 
 
