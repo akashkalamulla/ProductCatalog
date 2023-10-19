@@ -3,8 +3,8 @@ package com.Product.Catalog.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "product")
-public class Catalog {
+@Table(name = "catalog")
+public class Catalog{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

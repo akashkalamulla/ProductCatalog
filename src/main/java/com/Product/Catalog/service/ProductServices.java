@@ -32,4 +32,14 @@ public class ProductServices {
     public void DeletProduct(int id){
         catalogRepositroy.deleteById(id);
     }
+
+    public List<Catalog> findByName(String ProductName){
+        return catalogRepositroy.findByProductName(ProductName);
+    }
+
+    public List<Catalog> findByProductId(int ProductId){
+        return catalogRepositroy.findProductId(ProductId);
+    }
+
+
 }

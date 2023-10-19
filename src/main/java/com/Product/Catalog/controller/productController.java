@@ -18,28 +18,35 @@ public class productController {
         return productServices.getAllProducts();
     }
 
-    @GetMapping(path = "/product/{id}")
+    @GetMapping(path = "/products/{id}")
     public Catalog getProductFromCatalogId(@PathVariable int id){
         return productServices.getproductByID(id);
     }
 
-    @PostMapping(path = "/product")
+    @PostMapping(path = "/products")
     public Catalog CreateProduct(@RequestBody Catalog catalog){
         return productServices.CreateProduct(catalog);
     }
 
-    @PutMapping(path = "/product")
+    @PutMapping(path = "/products")
     public Catalog UpdateProductDetails(@RequestBody Catalog catalog){
         return productServices.UpdateProductDetails(catalog);
     }
 
-    @DeleteMapping(path = "/product/{id}")
+    @DeleteMapping(path = "/products/{id}")
     public void DeleteProduct(@PathVariable int id){
         productServices.DeletProduct(id);
     }
 
+    @GetMapping(path = "/products",params = "productname")
+    public List<Catalog> findByProductName(@RequestParam String ProductName){
+        return productServices.findByName(ProductName);
+    }
 
-
+    @GetMapping(path = "/prodcuts", params = "productid")
+    public List<Catalog> findByProductId(@RequestParam int ProductId){
+        return productServices.findByProductId(ProductId);
+    }
 
 
 }
