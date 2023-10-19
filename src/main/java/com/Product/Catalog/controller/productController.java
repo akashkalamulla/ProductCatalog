@@ -43,9 +43,14 @@ public class productController {
         return productServices.findByName(ProductName);
     }
 
-    @GetMapping(path = "/prodcuts", params = "productid")
+    @GetMapping(path = "/products",params = "productid")
     public List<Catalog> findByProductId(@RequestParam int ProductId){
         return productServices.findByProductId(ProductId);
+    }
+
+    @GetMapping(path = "/products",params = "brand")
+    public List<Catalog> findProductFromBrand(@RequestParam String Brand){
+        return productServices.findProdcutfromBrand(Brand);
     }
 
 

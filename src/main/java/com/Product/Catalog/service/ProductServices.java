@@ -5,6 +5,7 @@ import com.Product.Catalog.repository.CatalogRepositroy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -39,6 +40,10 @@ public class ProductServices {
 
     public List<Catalog> findByProductId(int ProductId){
         return catalogRepositroy.findProductId(ProductId);
+    }
+
+    public List<Catalog> findProdcutfromBrand(String Brand){
+        return catalogRepositroy.findProductfromBrand(Brand);
     }
 
 
