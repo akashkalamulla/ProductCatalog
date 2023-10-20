@@ -1,5 +1,12 @@
-### ProductCatalog
-drop database productcatalog;
+# ProductCatalog
+
+---
+
+Product catalog microservice for an e-commerce application
+
+## Database
+
+```mysql
 create database productcatalog;
 use productcatalog;
 
@@ -22,6 +29,7 @@ reviewrate float NOT NULL,
 numreview INT NOT NULL,
 PRIMARY KEY (id)
 );
+```
 INSERT INTO catalog (productid ,productname, Productdescription, category, brand, price, currency, weight, dimension, stockquantity, supplier, imgurls, tags, reviewrate, numreview)
 VALUES
 (232506,'samsundj4', 'Description for Product 1', 'medium budjet', 'smasung', 299.99, 'USD', 20, '10x5x3', 100, 'samsundhjx', 'image_url_1',  'Tag 1, Tag 2', 4.5, 50),
