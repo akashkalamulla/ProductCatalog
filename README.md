@@ -28,10 +28,10 @@ CREATE TABLE catalog
 
 INSERT INTO catalog (productname, Productdescription, category, brand, price, currency, weight, dimension,
                      stockquantity, imgurl)
-VALUES (232506, 'samsundj4', 'Description for Product 1', 'medium budjet', 'smasung', 299.99, 'USD', 20, '10x5x3', 100,
-        'samsundhjx', 'image_url_1', 'Tag 1, Tag 2', 4.5, 50),
-       (232507, 'iphone14', 'Description for Product 2', 'high budjet', 'apple', 49.99, 'USD', 1, '14x10x2', 200,
-        'porhxy', 'image_url_2', 'Tag 2, Tag 3', 4.0, 30),
-       (232508, 'nokia36', 'Description for Product 3', 'low budjet', 'nokia', 79.99, 'USD', 3, '8x8x8', 75, 'dearyoy',
-        'image_url_3', 'Tag 4, Tag 5', 4.2, 65);
+VALUES ('samsung j4', 'Description for Product 1', 'medium budget', 'samsung', 299.99, 'USD', 20, '10x5x3', 100,
+        'image_url_1'),
+       ('samsungMAX', 'Description for Product 2', 'high budget', 'samsung', 599.99, 'USD', 20, '10x5x3', 100,
+        'image_url_2'),
+       ('nokia', 'Description for Product 3', 'low budget', 'Nokia', 199.99, 'USD', 20, '10x5x3', 100,
+        'image_url_3');
 ```
