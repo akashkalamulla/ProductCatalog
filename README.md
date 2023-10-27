@@ -2,7 +2,7 @@
 
 ---
 
-Product catalog microservice for an e-commerce application
+Product product microservice for an e-commerce application
 
 ## Database
 
@@ -10,7 +10,7 @@ Product catalog microservice for an e-commerce application
 create database productcatalog;
 use productcatalog;
 
-CREATE TABLE catalog
+CREATE TABLE product
 (
     id                 INT AUTO_INCREMENT,
     productname        VARCHAR(50) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE catalog
     PRIMARY KEY (id)
 );
 
-INSERT INTO catalog (productname, Productdescription, category, brand, price, currency, weight, dimension,
+INSERT INTO product (productname, Productdescription, category, brand, price, currency, weight, dimension,
                      stockquantity, imgurl)
 VALUES ('samsung j4', 'Description for Product 1', 'medium budget', 'samsung', 299.99, 'USD', 20, '10x5x3', 100,
         'image_url_1'),
