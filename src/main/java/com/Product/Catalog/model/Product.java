@@ -12,31 +12,32 @@ public class Product {
     private int id;
 
     @Column(name = "productname")
-    private String ProductName;
+    private String productName;
 
     @Column(name = "Productdescription")
-    private String Description;
+    private String description;
 
     @Column(name = "category")
-    private String Category;
+    private String category;
 
     @Column(name = "brand")
-    private String Brand;
+    private String brand;
 
     @Column(name = "price")
-    private double Price;
+    private double price;
 
     @Column(name = "currency")
-    private String Currency;
+    private String currency;
 
     @Column(name = "weight")
-    private float Weight;
+    private float weight;
 
     @Column(name = "dimension")
-    private String Dimensions;
+    private String dimensions;
 
     @Column(name = "stockquantity")
-    private int Stock_Quantity;
+    private int stockQuantity;
+
     @Column(name = "imgurl")
     private String ImgUrl;
 
