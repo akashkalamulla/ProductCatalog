@@ -37,4 +37,30 @@ public class ProductService {
     }
 
 
+    public int decrementProductQuantity(int id) {
+        Optional<Product> product = catalogRepositroy.findById(id);
+        if (product.isPresent()) {
+            Product product1 = product.get();
+            product1.setStock_Quantity(product1.getStock_Quantity() - 1);
+            //delete if zero
+            if (product1.getStock_Quantity() == 0) {
+                catalogRepositroy.deleteById(id);
+                return 0;
+            }
+            catalogRepositroy.save(product1);
+            return product1.getStock_Quantity();
+        }
+        return -1;
+    }
+
+    public int incrementProductQuantity(int id) {
+        Optional<Product> product = catalogRepositroy.findById(id);
+        if (product.isPresent()) {
+            Product product1 = product.get();
+            product1.setStock_Quantity(product1.getStock_Quantity() + 1);
+            catalogRepositroy.save(product1);
+            return product1.getStock_Quantity();
+        }
+        return -1;
+    }
 }

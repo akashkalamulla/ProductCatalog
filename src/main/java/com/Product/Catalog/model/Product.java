@@ -36,7 +36,7 @@ public class Product {
     private String dimensions;
 
     @Column(name = "stockquantity")
-    private int stockQuantity;
+    private int stock_Quantity;
 
     @Column(name = "imgurl")
     private String ImgUrl;

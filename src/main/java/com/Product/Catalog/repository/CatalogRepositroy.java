@@ -10,16 +10,16 @@ import java.util.List;
 @Repository
 public interface CatalogRepositroy extends JpaRepository<Product,Integer> {
 
-    @Query("Select c from Product c where c.ProductName=?1")
+    @Query("Select c from Product c where c.productName=?1")
     List<Product> findByProductName(String ProductName);
 
     @Query("Select c from Product c where c.id=?1")
     List<Product> findProductId(int ProductId);
 
-    @Query("Select c from Product c where c.Brand=?1")
+    @Query("Select c from Product c where c.brand=?1")
     List<Product> findProductfromBrand(String Brand);
 
-    @Query("Select c from Product c where c.Category=?1")
+    @Query("Select c from Product c where c.category=?1")
     List<Product> findProductfromCategory(String Category);
 
 }

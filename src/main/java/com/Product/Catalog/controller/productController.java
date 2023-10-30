@@ -35,6 +35,16 @@ public class productController {
         return productServices.updateProductDetails(product);
     }
 
+    @PutMapping(path = "/decrement/{id}")
+    public int decrementProductQuantity(@PathVariable int id){
+        return productServices.decrementProductQuantity(id);
+    }
+
+    @PutMapping(path = "/increment/{id}")
+    public int incrementProductQuantity(@PathVariable int id){
+        return productServices.incrementProductQuantity(id);
+    }
+
     @DeleteMapping(path = "/{id}")
     public void deleteProduct(@PathVariable int id){
         productServices.deleteProduct(id);
